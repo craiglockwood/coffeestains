@@ -22,16 +22,7 @@
 (function($) {
   "use strict";
 
-// Product Zoom 
-    jQuery(window).load(function() {
-      $("#zoom-01").elevateZoom({gallery:'gallery-01', zoomType: 'lens', lensShape: 'round', lensSize : 200, galleryActiveClass: 'active', imageCrossfade: true}); 
-      $("#zoom-01").on("click", function(e) {  
-        var ez =   $('#zoom-01').data('elevateZoom'); 
-        $.fancybox(ez.getGalleryList());
-        return false;
-      }); 
-    });    
- 
+
 // Owl Carousel 
 
     // Home Slider
