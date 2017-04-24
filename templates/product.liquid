@@ -1,0 +1,352 @@
+<!-- Homepage -->
+      <div id="home">
+        
+        
+        <!-- Row -->
+        <div class="row">
+        
+        
+          <!-- Top Header -->
+          <div class="col-md-12">
+          
+            <!-- Section Content -->
+            <div class="section-content">
+              
+              <!-- Heading -->
+              <div class="top-header">
+
+                <!-- Logo -->
+               
+      
+                <!-- Title -->
+                <h2 class="dark uppercase t-center f-medium"><span class="bold">   {{ product.title }} </span></h2>
+      
+                <!-- Slogan / Sub-title -->
+                <h2 class="dark uppercase t-center f-normal">{{ product.tags }}{% if product.available %} - {{ product.price | money }}{% else %}{% endif %}</h2>
+                <div class="productintrowrap">
+                  <div class="productintro">
+                    <p class="f-small">{{ product.description }}</p>
+
+
+                    {% if product.available %}
+
+                      <div class="buyattop">
+                        <form action="/cart/add" method="post">
+                     
+                            <select id="product-select" name='id' class='hidden'>
+                            {% for variant in product.variants %}
+                            <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                            {% endfor %}
+                          </select>
+      
+                          <input type="submit" value="Add to cart" id="addtocart" class="button t-center" />
+   
+                        </form>
+                      </div><!-- end buyattop -->
+
+                    {% else %}
+     
+                      <div class="separator-center">
+
+                      </div><!-- End Separator -->
+
+                    {% endif %}
+
+                  </div><!-- end productintro -->
+                </div> <!-- end productintrowrap -->
+      
+              
+ 
+
+           
+
+
+
+    
+
+
+
+
+      
+              </div>
+              <!-- End Heading -->
+              
+            </div>
+            <!-- End Section Content -->
+            
+          </div>
+          <!-- End Top Header -->
+  
+        </div>
+        <!-- End Row -->
+        
+        
+        
+        <!-- Project -->
+        <div id="project">
+          
+          <!-- Section Content -->
+          <div class="section-content">
+          
+            <!-- Row -->
+            <div class="row">
+            
+            
+              <!-- Column -->
+              <div class="col-md-6">
+
+
+
+ <div class="project-image">
+
+               {% for image in product.images %}
+
+   {% if forloop.first %}
+
+    <div id="first-image">
+    <a href="{{ image | product_img_url: 'large' }}" title="{{ product.title }}"><img src="{{ image | product_img_url: 'large' }}" alt="{{ product.title | escape }}" /></a>
+  </div>
+
+   {% else %}
+
+    <div class="product-images">
+      <a href="{{ image | product_img_url: 'large' }}"  title="{{ product.title }}"><img src="{{ image | product_img_url: 'large' }}" alt="{{ product.title | escape }}" /></a>
+  </div>
+
+   {% endif %}
+
+  {% endfor %}
+
+  </div>
+              
+               
+                
+              </div>
+              <!-- End Column -->
+              
+              
+              <!-- Column -->
+              <div class="col-md-6">
+              
+         
+                
+                
+                <!-- Project Description -->
+                <div class="project-description no-margin t-left">
+                  
+                  <!-- Title -->
+                  <h2 class="dark uppercase f-semi-expanded">Unique <span class="bold">Details:</span></h2>
+                  
+                  <!-- Separator -->
+                  <div class="separator-small"></div>
+                  <!-- End Separator -->
+                  
+                  <!-- Project List -->
+                  <ul class="f-normal">
+                  
+                    <li><span class="bold">ID:</span> </a></li>
+                    
+                    <li><span class="bold">Birth date:</span> </a></li>
+                    
+                    <li><span class="bold">Materials:</span> </a></li>
+
+                     <li><span class="bold">Weight:</span> </a></li>
+
+                      <li><span class="bold">Length:</span> </a></li>
+                  
+                  </ul>
+                  <!-- End Project List -->
+                  
+                </div>
+                <!-- End Project Description -->
+
+
+
+
+
+ <!-- add to cart -->
+                <div class="project-description t-left">
+
+                 {% if product.available %}
+
+                     
+
+     {% else %}
+     
+  <!-- Title -->
+                  <h2 class="dark uppercase f-semi-expanded">Owner <span class="bold">Details:</span></h2>
+                  
+                  <!-- Separator -->
+                  <div class="separator-small"></div>
+                  <!-- End Separator -->
+                  
+                  <!-- Project List -->
+                  <ul class="f-normal">
+                  
+                    <li><span class="bold">Owner:</span> </li>
+                    
+                    <li><span class="bold">Date acquired:</span> </a></li>
+                    
+                    <li><span class="bold">Location:</span> </a></li>
+                  
+                  </ul>
+                  <!-- End Project List -->
+
+
+
+   {% endif %}
+                  
+                 
+
+            
+                 </div>
+                <!-- End Project Description -->
+
+
+
+
+
+                   <!-- Project Description -->
+                <div class="project-description t-left">
+                  
+                  <!-- Title -->
+                  <h2 class="dark uppercase f-semi-expanded">Makers <span class="bold">video:</span></h2>
+                  
+                  <!-- Separator -->
+                  <div class="separator-small"></div>
+                  <!-- End Separator -->
+                  
+                  <!-- Project List -->
+               
+                  <!-- End Project List -->
+                  
+                </div>
+                <!-- End Project Description -->
+                
+                
+                
+               
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                
+                
+                
+                
+                <!-- add to cart -->
+                <div class="project-description t-left">
+
+                 {% if product.available %}
+
+                      <form action="/cart/add" method="post">
+                     
+       <select id="product-select" name='id' class='hidden'>
+         {% for variant in product.variants %}
+         <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+         {% endfor %}
+       </select>
+  
+     
+   
+    
+     <input type="submit" value="Add to cart" id="addtocart" class="button float-l t-center" />
+   
+   </form>
+
+   </div>
+
+     {% else %}
+     
+  
+
+
+
+   {% endif %}
+                  
+                 
+
+            
+                 </div>
+                <!-- End Project Description -->
+
+
+
+
+             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </div>
+              <!-- End Column -->
+              
+            </div>
+            <!-- End Row -->
+            
+          </div>
+          <!-- End Section Content -->
+          
+        </div>
+        <!-- End Project -->
+        
+        
+      </div>
+      <!-- End Homepage -->
+
+	
+
+

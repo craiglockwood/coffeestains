@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]> -->
+<html lang="en">
+<!-- <![endif]-->
+
+<!-- head -->
+<head>
+<title>{{ shop.name }} - {{ page_title }}</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta name="description" content="A desperate attempt to get a job with Colonna coffee, by way of creating a custom Shopify theme to sell myself." />
+<meta name="keywords" content="colonna, shopify, job">
+<meta name="MobileOptimized" content="320" />
+
+
+
+<!-- icon assets -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="{{ 'apple-icon-57x57.png' | asset_url }}">
+<link rel="apple-touch-icon" sizes="60x60" href="{{ 'apple-icon-60x60.png' | asset_url }}">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ 'apple-icon-72x72.png' | asset_url }}">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ 'apple-icon-76x76.png' | asset_url }}">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ 'apple-icon-114x114.png' | asset_url }}">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ 'apple-icon-120x120.png' | asset_url }}">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ 'apple-icon-144x144.png' | asset_url }}">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ 'apple-icon-152x152.png' | asset_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ 'apple-icon-180x180.png' | asset_url }}">
+<link rel="icon" type="image/png" sizes="192x192"  href="{{ 'android-icon-192x192.png' | asset_url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ 'favicon-32x32.png' | asset_url }}">
+<link rel="icon" type="image/png" sizes="96x96" href="{{ 'favicon-96x96.png' | asset_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ 'favicon-16x16.png' | asset_url }}">
+<link rel="manifest" href="{{ 'manifest.json' | asset_url }}">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="{{ 'ms-icon-144x144.png' | asset_url }}">
+<meta name="theme-color" content="#ffffff">
+
+<!-- End icon assets -->
+
+
+
+<!-- CSS Files -->
+
+{{ 'bootstrap.min.css'  | asset_url | stylesheet_tag }}	
+{{ 'owl.carousel.css' | asset_url | stylesheet_tag }}
+{{ 'style.css' | asset_url | stylesheet_tag }}
+
+<!-- End CSS Files -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700" rel="stylesheet"> 
+
+{{ content_for_header }}
+
+</head>
+<!-- end head -->
+
+
+
+<!--body start-->
+<body id="home" data-spy="scroll" data-target=".navbar-default">
+
+
+<!--  navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+    
+        <a class="logo" href="index.html"><img src="{{ 'logo.png' | asset_url }}" width ="80px" alt="logo"></a>
+      </div>
+      
+    </div>
+  </nav>
+<!--  end navigation -->
+	
+
+
+
+
+	 
+  
+      {{ content_for_layout }}
+
+
+
+
+
+
+
+<!-- footer -->
+  <div id="footer-section" class="footer-main-block">
+    <div class="container">
+      <div class="footer-block text-center">
+        <h2 class="middle-heading">Any questions?</h2>
+        <a href="#" class="contact-btn"><p>Let's chat over coffee <i class="fa fa-long-arrow-right"></i></p></a>
+        
+      </div>
+    </div>
+    <hr>
+    <div class="container">
+      <div class="row copyright-block">
+        <div class="col-md-3 col-xs-6">
+          <div class="copyright">
+            
+            &copy; Craig Lockwood 2017
+          </div>
+        </div>
+        <div class="col-md-6 hidden-xs hidden-sm">
+          <div class="copyright text-center">
+           Coffee stained - a custom Shopify theme by Craig Lockwood
+          </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+          <div class="footer-social">
+            <ul>             
+              
+              <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fa fa-github"></i></a></li>
+            
+            </ul>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- end footer -->
+
+
+
+<!-- JavaSript Files -->
+
+      {{ 'jquery.min.js' | asset_url | script_tag }}
+      {{ 'bootstrap.min.js' | asset_url | script_tag }}
+      {{ 'owl.carousel.js' | asset_url | script_tag }}
+      {{ 'theme.js' | asset_url | script_tag }}
+<!-- End JavaSript Files -->
+
+
+
+</body>
+
+</html>
+
+      
+

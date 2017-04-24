@@ -1,0 +1,112 @@
+
+							
+
+
+
+						
+							
+
+<!-- Homepage -->
+			<div id="heading">
+			
+				<!-- Left Side -->
+				<div class="left-side-small">
+				
+					<!-- Section Content -->
+					<div class="section-content">
+						
+						<!-- Heading -->
+						<div class="heading">
+
+							<!-- Logo -->
+						
+		
+							<!-- Title -->
+							<h2 class="dark uppercase t-left f-expanded">{{page.title}}</h2>
+							
+							<!-- Separator -->
+							<div class="separator"></div>
+							<!-- End Separator -->
+							
+							<!-- Big Text -->
+							<h2 class="dark uppercase t-left f-normal">Some big text.</h2>
+							
+							<!-- Link -->
+							
+		
+						</div>
+						<!-- End Heading -->
+						
+					</div>
+					<!-- End Section Content -->
+	
+				</div>
+				<!-- End Left Side -->
+				
+				
+				
+				
+				
+				<!-- Right Side -->
+				<div id="blog" class="right-side-large">
+				
+					<!-- Section Content -->
+					<div class="section-content">
+					
+						<!-- Row -->
+						<div class="row">
+						
+						
+							<!-- Column -->
+							<div class="blog-post col-md-12">
+							
+								
+								
+									<!-- Image -->
+										{% case page.handle %}
+										{% when 'story-purpose' %}
+										{{ 'story.jpg' | asset_url | img_tag }}
+										{% when 'faq' %}
+										<img src=”faq.jpg">
+										{% else %}
+										{% endcase %}
+									
+								
+									
+									
+									<!-- Page content -->
+									<p class="t-left lato f-small">
+										{{page.content}}
+									</p>
+									<!-- End page content -->
+									
+									
+								
+							</div>
+							<!-- End Column -->
+
+
+							
+						</div>
+						<!-- End Row -->
+						
+						
+						
+						
+						
+					
+						
+						
+
+						
+					</div>
+					<!-- End Section Content -->
+					
+				</div>
+				<!-- End Right Side -->
+				
+				
+				
+				
+			</div>
+			<!-- End Homepage -->
