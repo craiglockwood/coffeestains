@@ -1,2 +1,19 @@
 {
+  "current": {
+    "checkout_header_image": "shopify:\/\/shop_images\/2.jpg",
+    "checkout_logo_image": "shopify:\/\/shop_images\/logo_square.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "Helvetica Neue",
+    "checkout_body_font": "Helvetica Neue",
+    "checkout_accent_color": "#1990C6",
+    "checkout_button_color": "#1990C6",
+    "checkout_error_color": "#ff6d6d",
+    "content_for_index": []
+  }
 }

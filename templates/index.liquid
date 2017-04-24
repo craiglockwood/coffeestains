@@ -7,7 +7,7 @@
 
         <div class="item slide-inner">
           <div class="slider-text">           
-            <h1 class="slider-heading"><span class="orangetop">Design</span></h1>
+            <h1 class="slider-heading"><span class="orangetop">design</span></h1>
            
             <div class="slider-tag">
             </div>
@@ -133,29 +133,17 @@
 
         <div class="col-md-4">
 			<div class="plan-block">   
-            <a href="{{product.url}}">{{ product.featured_image | product_img_url: 'medium' | img_tag }}</a>
+            <a href="{{product.url}}">{{ product.featured_image | product_img_url: 'large' | img_tag }}</a>
+
            
             <h3 class="plan-name">{{product.title}}</h3>
-            <h3 class="plan-price">Available now</h3>
+            <h3 class="plan-price">{{ product.variants.first.inventory_quantity }} available</h3>
            
             	<div class="plan-dtl text-center">
-              		<ul>
-                		<li>
-                  		<h6 class="txt-uppr">An eye for detail</h6>
-                		</li>
-                		<li>
-                  		<h6 class="txt-uppr">Bags of taste</h6>
-                 		</li>
-                		<li>
-                  		<h6 class="txt-uppr">Sound principles</h6>
-                 		</li>
-                		<li>
-                  		<h6 class="txt-uppr">Adobe Creative suite user</h6>
-           				</li>
-              		</ul>
+              		<p>{{ product.description }} </p>
             	</div>  
              	<div class="plan-btn text-center">          
-              	<a href="#" class="btn btn-default">Buy now</a>
+              	<a href="{{product.url}}" class="btn btn-default">Find out more</a>
             	</div>
           	</div>
         </div>
@@ -186,10 +174,11 @@
                     <h2 class="middle-heading">Why Craig?</h2>
                     <hr class="light">
                     <div class="text-left">
-                    <p>Craig has been working within the web industry since the 90's. This means that he has seen fads and trends come and go, this has helped to shape Craigs taste who is a firm believer in style over fashion when it comes to the Web. Craig is very much a self starter and has managed teams of designers, developers and content writers on a variety of projects of all shapes and sizes.</p>
+                    <p>Craig has been working within the web industry since the 90's. This means that he has seen fads and trends come and go, this has helped to shape Craigs taste. Craig is very much a self starter and has managed teams of designers, developers and content writers on a variety of projects of all shapes and sizes.</p>
                     <p>
-                    Craig has also run a number of small businesses employing creatives from lots of different disciplines. He is aware that any new team member has to not only cover costs, but bring extra value and ensure a company thrives.</p>
-                    <p>As a Shopify partner, Craig has developed a number of custom themes (including this one, expecially for you) and has managed his own succesful stores for a number of years. If it can be done on Shopify, Craig can do it.</p> 
+                    Craig has also run a number of small businesses, employing creatives from many different disciplines. He is aware that any new team member has to not only cover costs, but bring extra value and ensure a company thrives.</p>
+                    <p>As a Shopify partner, Craig has developed numerous custom themes (including this one, expecially for you) and has managed his own succesful stores for a number of years. If it can be done on Shopify, Craig can do it.</p> 
+                    <p>Craig spends most of his time in his ramshackle renovation project in a tiny part of France that no-one but the locals has ever heard of. As you’d expect from any Welshman pretending to be a Frenchman, Craig is fuelled by great bread and amazing coffee. Give him a Couronne and a Carmen Estate Geisha in the morning sunshine and you’ll never see a grown man more contented.</p>
                     <p>
                     In short, Craig is a safe bet. He knows his stuff and is keen to to work with an intelligent team on an exciting product.</p>
                   </div>

@@ -115,8 +115,18 @@ a:active {
 }
 ul {
   list-style: none;
+
   margin: 0;
   padding: 0; 
+  color: #494949;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #494949;
+  margin: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  margin-bottom: 1em;
 }
 .form-control  {
   background-color: #FFF;
@@ -1310,6 +1320,7 @@ i.facts-icon {
 .footer-main-block {
   background-color: #ECECEC;
   padding: 85px 0 38px;
+  background-image: url('stains2.jpg');
 }
 .footer-block {
   padding-bottom: 64px;
@@ -1744,6 +1755,12 @@ select + i.fa {
 }
 .plan-block {
   border: 1px solid #ECECEC; 
+
+}
+
+.plan-block img {
+  width: 100%; 
+  
 }
 
 .plan-block:hover img {
@@ -2019,10 +2036,16 @@ select + i.fa {
 .product-sidebar {
   margin-top: 32px;
 }
+
+.product-sidebar img {
+  width:100%;
+}
+
 .download-btn {
   background-color: #FF6101;
   width: 100%;
-  padding: 18px 0 25px;
+  padding: 18px 0 10px;
+
 }
 a.download-link {
   color: #FFF;
@@ -2035,7 +2058,7 @@ a.download-link {
 }
 .download-dtl li a {
   color: #FFF;
-  font-size: 10px;
+  font-size: 16px;
   text-transform: uppercase;
 }
 .rating {
@@ -2469,3 +2492,4 @@ a.download-link {
   40% {transform: translateY(-30px);}
   60% {transform: translateY(-15px);}
 }
+

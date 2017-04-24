@@ -1,18 +1,104 @@
 
-<h2>Your Cart</h2>
-{% if cart.item_count == 0 %} 
-You have an empty cart.
-  {% else %}
 
 
 
-	{% for item in cart.items %}
-
-		{{ item.title }}
-		{{ item.price | money }}
-		{{ item.quantity }}
-		{{ item.line_price | money }}
-	{% endfor %}
+  <div class="container section-heading">
+  
+  </div>
 
 
-{% endif %}
+<!-- Include this JS snippet here as it needs to be accessible to the cart table. -->
+<script type="text/javascript">
+  function remove_item(id) {
+    document.getElementById('updates_'+id).value = 0;
+    document.getElementById('cartform').submit();
+  }
+</script>
+
+<div class="container">
+  <div class="row">
+
+    <!-- Cart Summary -->
+    <div class="span4">
+      <p class="lead">
+        
+          <em>You have {% if cart.item_count == 0 %}
+					Your cart is currently empty
+				{% else %}
+					{{ cart.item_count }} {{ cart.item_count | pluralize: 'item', 'items' }} in your cart
+				{% endif %}			</em>
+        
+      </p>
+    </div>
+
+    <!-- Cart Table (only visible if items are in the cart) -->
+    
+    <div class="span8">
+      <form action="/cart" method="post" id="cartform">
+
+        <!-- Cart Line Items and Totals -->
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th style="text-align: right;">Price</th>
+              <th style="text-align: center;">Qty</th>
+              <th style="text-align: right;"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            
+     {% for item in cart.items %}         
+<tr>
+  <td>
+    <a href="#" class="close" </a>
+
+    <h4>
+      <a href="/products/drop-in-customisation" target="_blank">
+        {{ item.title }}
+      </a>
+    </h4>
+
+    <p class="hidden-phone">
+{{ item.title }}
+    </p>
+  </td>
+
+  <td style="text-align: right;">	{{ item.price | money }}</td>
+
+  <td style="text-align: center;">
+    <input type="text" class="input-mini text-center" size="4" name="updates" value="{{ item.quantity }}" />
+  </td>
+
+  <td style="text-align: right;">$0.00</td>
+</tr>
+            
+          </tbody>
+
+          {% endfor %}
+
+      
+        </table>
+ <div class="plan-btn text-left"> 
+        <div class="text-right">
+         
+           <input type="submit" name="checkout" class="btn btn-default" value="Checkout">
+        </div>
+  </div>
+
+      </form>
+    </div>
+    
+
+  </div>
+</div>
+<div class="padbot"></div>
+
+
+
+
+
+
+
+
